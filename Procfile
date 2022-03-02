@@ -1,0 +1,1 @@
+web: gunicorn TClearning.wsgi --log-file -

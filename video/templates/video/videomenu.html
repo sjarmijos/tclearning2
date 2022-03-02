@@ -1,0 +1,85 @@
+{% extends "inicio.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block equation %}
+<link rel="stylesheet" href="{% static 'mathscribe/jqmath-0.4.3.css' %}">
+<script src="{% static 'mathscribe/jquery-1.4.3.min.js' %}"></script>
+<script src="{% static 'mathscribe/jqmath-etc-0.4.6.min.js' %}" charset="utf-8"></script>
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/stylevid.css' %}">{% endblock %}
+{% block title %} Videos | Conjuntos {% endblock %}
+
+
+{% block header %}
+<section class="textos-header">
+    <br><br>
+    <h1 style="text-align: left;">¿Necesitas reforzar tus conocimientos de operaciones de conjuntos?</h1>
+    <h2>Con las herramientas multimedia puedes hacerlo</h2>
+</section>
+<div class="ola">
+    <div style="height: 150px; overflow: hidden;">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+            <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #fff;">
+            </path>
+        </svg>
+    </div>
+</div>
+{% endblock %}
+
+{% block contenido %}
+<h1>Videos</h1>
+
+<div class="row aling items-center">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-4">
+        <h4>Ejemplos de como realizar la Unión</h4>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/vACHEJRLguA" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+        encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="col-lg-2"></div>
+    <div class="col-lg-4">
+        <h4>Ejemplos de como realizar la intersección</h4>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/i3hyx_RpUPc" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+        encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="col-lg-1"></div>
+    
+</div>
+<br><br>
+<div class="row aling items-center">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-4">
+        <h4>Ejemplos de como realizar la diferencia</h4>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/yYOZ-B-nEHQ" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+        encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="col-lg-2"></div>
+    <div class="col-lg-4">
+        <h4>Ejemplos de como realizar la diferencia simétrica</h4>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9dN65EucNCE" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+        encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="col-lg-1"></div>
+</div>
+<br><br><br>
+<div class="row align-items-center">
+    <div class="col-lg-2">
+    </div>
+    <div class="col-lg-4">
+        <a href="{% url 'indexLand' %}" class="buttonC"> <span>Página principal</span> </a>
+    </div>
+    <div class="col-lg-4">
+        <a href="{% url 'menucalc' %}" class="buttonC"> <span>Calculadora</span> </a>
+    </div>
+    <div class="col-lg-2">
+    </div>
+</div>
+{% endblock %}

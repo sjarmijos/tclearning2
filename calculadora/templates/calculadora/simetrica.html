@@ -1,0 +1,78 @@
+{% extends "inicio.html" %}
+{% load static %}
+
+{% block equation %}
+<link rel="stylesheet" href="{% static 'mathscribe/jqmath-0.4.3.css' %}">
+<script src="{% static 'mathscribe/jquery-1.4.3.min.js' %}"></script>
+<script src="{% static 'mathscribe/jqmath-etc-0.4.6.min.js' %}" charset="utf-8"></script>
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/stylecalc.css' %}">{% endblock %}
+{% block title %} Calculadora | Diferencia Simétrica {% endblock %}
+
+
+{% block header %}
+<section class="textos-header">
+    <h1>Pon a tu disposición la tecnología</h1>
+    <h2>Usando la calculadora de conjuntos</h2>
+</section>
+<div class="ola">
+    <div style="height: 120px; overflow: hidden;">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+            <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #fff;">
+            </path>
+        </svg>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block contenido %}
+<h1 style="color: #fff;">Diferencia Simétrica de conjuntos</h1>
+<br>
+    <div class="container-fluid" style="color: #fff;">
+        $A \ Δ\ B$ = {{ca}} Δ {{cb}} <br>
+        $A \ Δ\ B$ = {{resultado}} <br>     
+    </div>
+    <div class="container" style="color: #fff;">
+        <br><br>
+        {% if chart %}
+            <img src="data:image/png;base64, {{chart|safe}}" alt="grafico union">
+            <br><br>
+        {% endif %}
+    </div>
+    <br><br>
+    <div class="container-fluid" style="color: #fff; ">
+        Análisis del gráfico:
+        <p>
+            <ul>
+                <li>    
+                    Se puede observar la Diferencia A Δ  B que son las dos áreas coloreadas de 
+                    <code style="color: #FFBA63; font-size: 30px;"> Naranja</code>,
+                    es decir son los elementos de A y B que no tienen en común.  <br>
+                </li>
+            </ul>
+            
+        </p>
+    </div>
+    <div class="row align-items-center">
+        <div class="col-lg-2">
+        </div>
+        <div class="col-lg-4">
+            <a class="buttonC" href="{% url 'calcudifsim' %}">
+                <span>Nueva Diferencia Simétrica</span>
+            </a>
+        </div>
+    
+        <div class="col-lg-4">
+            <a class="buttonP" href="{% url 'menucalc' %}">
+                <span>Menú de operaciones</span>
+            </a>
+        </div>
+        <div class="col-lg-2">
+        </div>
+    </div>
+
+{% endblock %}

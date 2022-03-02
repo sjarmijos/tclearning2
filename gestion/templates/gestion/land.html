@@ -1,0 +1,168 @@
+{% extends "fuente.html" %}
+{% load static %}
+
+{% block style %} <link rel="stylesheet" href="{% static 'css/styleLand.css' %}"> {% endblock %}
+
+{% block title %} Home {% endblock %}
+{% block body %}
+<!-- Div del Carrusel -->
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'img/c2.gif' %}" class="d-block w-100" alt="..." >
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'img/c3.gif' %}" class="d-block w-100" alt="..." >
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'img/c4.gif' %}" class="d-block w-100" alt="..." >
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="container-fluid">
+  <br>
+  <!-- Div de Medicos -->
+  <div class="container mt-5">
+    <!--Section: Content-->
+    <section class="dark-grey-text">
+      <!-- Section heading -->
+      <h1 class="text-center font-weight-bold mb-4 pb-2">TCLearning</h1>
+      <!-- Section description -->
+      <h5 class="text-center mx-auto w-responsive mb-5">
+        Aprender sobre la Teoría de conjuntos con la tecnologia de 
+        la mano, es un método que permite no solamente generar un aprendizaje, sino 
+        también un refuerzo del mismo en cualquier lugar en donde se encuentre ya que
+        con dispositivos moviles como smarthphones, tablets o laptops y una conexión a 
+        internet, se puede acceder a este software educativo.
+      </h5>
+      <!-- Grid row -->
+      <div class="row align-items-center">
+        <!-- Grid column -->
+        <div class="col-lg-4">
+          <!-- Featured image -->
+          <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
+            <img class="img-fluid" src="{% static 'img/teoriaf1.png' %}" alt="Imagenteoria" style="width: 100%;">
+            <a>
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+        </div>
+        <!-- Grid column -->
+        <!-- Grid column -->
+        <div class="col-lg-8">
+          <!-- Category -->
+          <a href="#!" class="green-text">
+            <h6 class="font-weight-bold mb-3"><i class="fas fa-kaaba"></i></h6>
+          </a>
+          <!-- Post title -->
+          <h4 class="font-weight-bold mb-3"><strong>Teoría</strong></h4>
+          <!-- Excerpt -->
+          <p style="text-align: justify;">
+            Dentro de este módulo se puede acceder a los conceptos y definiciones sobre 
+            puntos como conjuntos, subconjuntos, representaciones, operaciones, alegra de conjuntos
+            y tipos de conjuntos.
+            <!-- Post data -->
+            <br><br>
+            <!-- Read more button -->
+            <a class="buttonM" href="{% url 'Tconjuntos' %}">Conoce más</a>
+        </div>
+
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+      <hr class="my-5">
+    </section>
+    <!--Section: Content-->
+  </div>
+  <!-- Div de citas -->
+  <div class="container mt-5">
+    <!--Section: Content-->
+    <section class="dark-grey-text">
+      <!-- Grid row -->
+      <div class="row align-items-center">
+        <!-- Grid column -->
+        <div class="col-lg-8">
+          <!-- Category -->
+          <a href="#!" class="green-text">
+            <h6 class="font-weight-bold mb-3"><i class="fas fa-kaaba"></i></h6>
+          </a>
+          <!-- Post title -->
+          <h4 class="font-weight-bold mb-3"><strong>Ejemplos</strong></h4>
+          <!-- Excerpt -->
+          <p style="text-align: justify;">
+            El módulo de ejemplos permitirá poder observar la manera en la que
+            se resuelven ejercicios planteados sobre todos los temas que se han 
+            explicado en el modulo de teoría.
+          </p>
+          <!-- Post data -->
+          <br><br>
+          <!-- Read more button -->
+          <a class="buttonM" href="{% url 'Ebasico' %}">Conoce más</a>
+        </div>
+        <!-- Grid column -->
+        <!-- Grid column -->
+        <div class="col-lg-4">
+          <!-- Featured image -->
+          <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
+            <img class="img-fluid" src="{% static 'img/ejemplos.jpg' %}" alt="imagenejemplos" style="width: 100%;">
+            <a>
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+      <hr class="my-5">
+    </section>
+    <!--Section: Content-->
+  </div>
+  <div class="container mt-5">
+    <!--Section: Content-->
+    <section class="dark-grey-text">
+      <!-- Grid row -->
+      <div class="row align-items-center">
+        <!-- Grid column -->
+        <div class="col-lg-4">
+          <!-- Featured image -->
+          <div class="view overlay rounded z-depth-2 mb-lg-0 mb-4">
+            <img class="img-fluid" src="{% static 'img/calc.jpg' %}" alt="imagencitas">
+            <a>
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <!-- Category -->
+          <a href="#!" class="green-text">
+            <h6 class="font-weight-bold mb-3"><i class="fas fa-kaaba"></i></h6>
+          </a>
+          <!-- Post title -->
+          <h4 class="font-weight-bold mb-3"><strong>Calculadora</strong></h4>
+          <!-- Excerpt -->
+          <p style="text-align: justify;">
+            El módulo de Calculadora permitira realizar operaciones combinadas entre
+            conjuntos, tomando en cuenta la teoría que se ha explicado en su respectivo
+            modulo.
+          </p>
+          <!-- Post data -->
+          <br><br>
+          <!-- Read more button -->
+          <a class="buttonM" href="#">Conoce más</a>
+        </div>
+      </div>
+      <!-- Grid row -->
+    </section>
+    <!--Section: Content-->
+  </div>
+</div>
+{% endblock %}

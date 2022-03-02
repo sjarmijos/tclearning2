@@ -1,0 +1,301 @@
+{% extends "inicio.html" %}
+{% load static %}
+
+{% block equation %}
+<link rel="stylesheet" href="{% static 'mathscribe/jqmath-0.4.3.css' %}">
+<script src="{% static 'mathscribe/jquery-1.4.3.min.js' %}"></script>
+<script src="{% static 'mathscribe/jqmath-etc-0.4.6.min.js' %}" charset="utf-8"></script>
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/styleconj.css' %}">{% endblock %}
+{% block title %} Teoría | Conjuntos {% endblock %}
+
+
+{% block header %}
+<section class="textos-header">
+    <h1>Comprende los principios teóricos de los Conjuntos</h1>
+    <h2>Utilizando la tecnología a tu favor</h2>
+</section>
+<div class="ola">
+    <div style="height: 150px; overflow: hidden;">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+            <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #fff;">
+            </path>
+        </svg>
+    </div>
+</div>
+
+{% endblock %}
+
+{%block contenido%}
+<div class="container-fluid">
+    <h1 style="text-align: center;">Principales Conceptos</h1>
+    <br><br>
+    <section class="QConjuntos1">
+        <div class="row align-items-center">
+            <!-- Grid column -->
+            <div class="col-lg-4">
+                <!-- Featured image -->
+                <img class="img-fluid marco" src="{% static 'img/intro.png' %}" alt="ImagenDoc"
+                    style="width: 100%; height: 100%;">
+            </div>
+            <!-- Grid column -->
+            <div class="col-lg-8">
+                <!-- Post title -->
+                <h3 class="font-weight-bold mb-3">¿Qué son los conjuntos? </h3><br>
+                <!-- Excerpt -->
+                <p style="text-align: justify;">
+                    Los conjuntos son una agrupación de elementos que pueden tener caracteristicas similares entre si
+                    adicionalmente, se puede determinar que un conjunto puede tener cualquier tipo de elemento
+                    ya sean estos: Números, Frutas, Animales, Figuras, entre muchos otros más.
+
+                    De esta manera los conjuntos pueden ser de diferentes tipos o a su vez se puede decir que se
+                    clasifican
+                    de la siguiente manera en función del numero de elementos que contienen:
+                </p>
+                    <br>
+                    <ul>
+                        <li>Conjuntos Finitos</li>
+                        <li>Conjuntos Infinitos</li>
+                    </ul>
+                <p style="text-align: justify;">
+                    <br>
+                    Cabe destacar que los conjuntos se pueden clasificar por el indicador de las relaciones que tienen entre
+                    si
+                    mismas que pueden ser de la siguiente manera:
+                </p>
+                    <br>
+                    <ul>
+                        <li>Conjuntos Disjuntos</li>
+                        <li>Conjuntos Subconjuntos</li>
+                    </ul>
+                    <br>
+                <p style="text-align: justify;">
+                    Esta clasificación se podrá seguir revisando en los siguientes temas donde se revisará a detalle que
+                    conllevan cada
+                    uno de ellos.
+                </p>
+
+            </div>
+            <!-- Grid column -->
+        </div>
+    </section>
+    <br>
+    <hr><br>
+    <section class="Qconjuntos2">
+        <div class="row align-items-center">
+            <!-- Grid column -->
+            <div class="col-lg-8">
+                <!-- Excerpt -->
+                <p style="text-align: justify;">
+                    Un conjunto puede darse enumerando todos y cada uno de los elementos que lo forman, cuando tal
+                    enumeración sea larga
+                    o imposible se recurre a fórmulas de recurrencia o a expresiones generalistas.
+                    <br>
+                    Cabe destacar que, los conjuntos en su representación de lenguaje matemático suelen designarse
+                    mediante letras
+                    mayúsculas $$A, B, C, … $$ y los elementos del conjunto se escriben entre llaves; siendo su
+                    expresión final de la
+                    siguiente manera: <br><br>
+
+                <h2>$$A= \{a,b,c\}$$</h2>
+                </p>
+                <p style="text-align: justify;">
+                    El conjunto vacío no tiene ningún elemento. Se representa por la letra ∅, este conjunto se define
+                    como una necesidad teórica;
+                    se necesita para aceptar algunas propiedades.
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <!-- Featured image -->
+                <img class="img-fluid" src="{% static 'img/ConceptosBasicos2.png' %}" alt="ImagenDoc">
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+        </div>
+    </section>
+    <br>
+    <hr>
+    <br>
+    <section class="Pertenencia">
+        <div class="row align-items-center">
+            <!-- Grid column -->
+            <div class="col-lg-4">
+                <!-- Featured image -->
+                <img class="img-fluid" src="{% static 'img/pertenencia2.png' %}" alt="ImagenDoc">
+            </div>
+
+            <div class="col-lg-8">
+                <h3 class="font-weight-bold mb-3"> Relación de Pertenencia </h3><br>
+                <!-- Excerpt -->
+                <p style="text-align: justify;">
+                    El ser elemento de, es una relación binaria o de dos argumentos, entre dos objetos de la Teoría de
+                    Conjuntos.
+                    Esta relación va de un objeto a otro, donde el segundo objeto es necesariamente un conjunto y el
+                    primero puede ser
+                    o no un conjunto.
+                    <br>
+                    Un elemento pertenece a un conjunto cuando es de él. Si el elemento “a” pertenece al conjunto A se
+                    escribe: $$a ∈ A$$ <br>
+                    Si el elemento p no pertenece al conjunto A se escribe: $$p ∉ A$$.
+                </p>
+            </div>
+        </div>
+    </section>
+    <br>
+    <hr><br>
+    <section class="universo">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h3 class="font-weight-bold mb-3"> Conjunto Universo </h3>
+                <br>
+                <!-- Excerpt -->
+                <p style="text-align: justify;">
+                    En la Teoría de Conjuntos, se tiene como referencia, explícita o implícitamente, un universo local;
+                    es decir,
+                    un marco de referencia dentro del cual se trabaja.
+                    <br><br>
+                    En otras palabras el conjunto universo es aquel que contiene a todos los elementos y se lo denota
+                    por la letra U.
+                    El universo lo forman el conjunto de conjuntos que intervienen.
+                    Así, si se está hablando de todos los números, el conjunto universal será los números complejos.
+                </p>
+            </div>
+            <!-- Grid column -->
+            <div class="col-lg-4">
+                <!-- Featured image -->
+                <img class="img-fluid" src="{% static 'img/universo2.png' %}" alt="ImagenDoc">
+            </div>
+        </div>
+    </section>
+    <br>
+    <hr><br>
+    <section class="subc">
+        <div class="row align-items-center">
+            <!-- Grid column -->
+            <div class="col-lg-4">
+                <!-- Featured image -->
+                <img class="img-fluid" src="{% static 'img/Subconjuntos.png' %}" alt="ImagenDoc">
+            </div>
+            <div class="col-lg-8">
+                <h3 class="font-weight-bold mb-3"> Subconjuntos </h3>
+                <br>
+                <!-- Excerpt -->
+                <p style="text-align: justify;">
+                    Un subconjunto de A es cualquier conjunto formado por cualquier número de elementos de A.
+                    Entre los subconjuntos de A se incluyen el conjunto ∅ y el mismo A.
+                    Por esta razón se puede establecer que:
+                    <br><br>
+                    $$∅ ⊂ A \ y\ A ⊂ A$$
+                    <br>
+                    Para indicar que B es un subconjunto de A se escribe
+                    $B ⊂ A$ y también se lee “B está contenido en A”.
+
+                    <br><br>
+                    El símbolo ⊂ (subconjunto de) puede leerse al revés: ⊃. Esto es, $B ⊂ A$ es lo mismo que $A ⊃ B$.
+                    (La parte abierta señala al conjunto mayor.)
+                    <br>
+                    Cabe destacar que no debe escribirse $B ∈ A$ para indicar la relación $B ⊂ A$. En cambio, si $a ∈ A$
+                    puede escribirse $\{a\}⊂ A$. Al meter el elemento a entre llaves se considera el
+                    conjunto unitario $\{a\}$.
+                    <br><br>
+                    Si un conjunto C no es subconjunto de A se escribe $C ⊄ A$.
+
+                </p>
+            </div>
+        </div>
+        <br>
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <!-- Excerpt -->
+                <p style="text-align: justify;">
+                    <br><br>
+                    Un conjunto puede tener una gama amplia de subconjuntos, dentro de ella se encuentran
+                    subconjuntos con un solo elemento, que podrían llamarse subconjuntos elementales; subconjuntos
+                    con dos elementos; etc. (Puede demostrase que, si un conjunto A tiene n elementos, el número de
+                    subconjuntos de A es $2^n$ , incluyendo el vacío y el mismo A.)
+                    La relación de contenido cumple las propiedades siguientes:
+                    <br><br>
+                <ol>
+                    <li>Si $C ⊂ B$ y $B ⊂ A ⇒ C ⊂ A$.</li>
+                    <li>Si $A ⊂ B$ y $B ⊂ A ⇒ A = B$.</li>
+                    <li>Para todo conjunto $A, ∅ ⊂ A$.</li>
+                </ol>
+                Los subconjuntos tienen las siguientes propiedades:
+                    <ul>
+                        <li>
+                            Reflexiva: Todo conjunto es subconjunto de sí mismo.
+                            <br>$A ⊂ A$
+                        </li>
+                        <br>
+                        <li>
+                            Antisimétrica: Si dados dos conjuntos $A \ y\ B$ 
+                            <br> Se verifica $A ⊂ B$ 
+                            <br> Entonces se deduce que: $B ⊄ A.$ 
+                            <br> Ya que $A ⊂ B ⇒ A ⊄ B$
+                        </li>
+                        <br>
+                        <li>
+                            Transitiva: Dados tres conjuntos $A, B \ y\ C$, 
+                            <br> si se verifica $A ⊂ B \ y\ B ⊂ C$ 
+                            <br> entonces $A ⊂ C$
+                        </li>
+                    </ul>
+                </p>
+            </div>
+            <!-- Grid column -->
+            <div class="col-lg-4">
+                <!-- Featured image -->
+                <img class="img-fluid" src="{% static 'img/Subconjuntos2.png' %}" alt="ImagenDoc">
+            </div>
+        </div>
+        <br>
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <h3 style="font-weight: bold;">Subconjunto propio</h3><br>
+                <!-- Excerpt -->
+                <p style="text-align: justify;">
+                    Un subconjunto propio es aquel que está conformado por elementos de otro conjunto
+                    pero que estos dos no son iguales, es decir si A es un subconjunto de B, pero distinto
+                    de B, se dice que A es un subconjunto propio de B, para esto la notación: $A ⊆ B$ es
+                    adecuada, pero si se quiere resaltar que A y B son distintos, la notación precisa
+                    seria la siguiente: $A ⊊ B$
+                    <br><br>
+                    <center><img class="img-fluid" src="{% static 'img/SCpropio2.png' %}" alt="ImagenDoc"
+                            style="width: 25%; align-items: center;"></center>
+                </p>
+                <br><br>
+                <h3 style="font-weight: bold;">Subconjunto complementario de otro</h3><br>
+                <p style="text-align: justify;">
+                    Si B es un subconjunto de A, se llama complementario de B (respecto de A), al
+                    subconjunto de A formado por los elementos que no son de B. El complementario de un
+                    conjunto B se representa mediante alguno de los símbolos $B^c$ , $B'$ o $B ̅. $ El complementario
+                    siempre hace referencia a un todo. Luego, el complementario de B es lo que le falta a B para ser
+                    todo.
+                    <br><br>
+                    <center><img class="img-fluid" src="{% static 'img/complemento.png' %}" alt="ImagenDoc"
+                            style="width: 25%;"></center>
+                </p>
+            </div>
+        </div>
+        
+        <br><br><br>
+        <div class="row align-items-center">
+            <div class="col-lg-1">
+            </div>
+            <div class="col-lg-3">
+                <a class="buttonM" href="{% url 'indexLand' %}">Página de Inicio</a>
+            </div>
+            <div class="col-lg-4">
+            </div>
+            <div class="col-lg-3">
+                <a class="buttonM" href="{% url 'Toperaciones' %}">Operaciones con Conjuntos</a>
+            </div>
+            <div class="col-lg-1">
+            </div>
+        </div>
+    </section>
+</div>
+{%endblock%}

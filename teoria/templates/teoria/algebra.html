@@ -1,0 +1,249 @@
+{% extends "inicio.html" %}
+{% load static %}
+
+{% block equation %}
+<link rel="stylesheet" href="{% static 'mathscribe/jqmath-0.4.3.css' %}">
+<script src="{% static 'mathscribe/jquery-1.4.3.min.js' %}"></script>
+<script src="{% static 'mathscribe/jqmath-etc-0.4.6.min.js' %}" charset="utf-8"></script>
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/styleconj.css' %}">{% endblock %}
+{% block title %} Teoría | Conjuntos {% endblock %}
+
+
+{% block header %}
+<section class="textos-header">
+    <h1>Comprende los principios teóricos de los Conjuntos</h1>
+    <h2>Utilizando la tecnología a tu favor</h2>
+</section>
+<div class="ola">
+    <div style="height: 150px; overflow: hidden;">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+            <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #fff;">
+            </path>
+        </svg>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block contenido %}
+<center>
+    <h1>Algebra de conjuntos</h1>
+</center><br><br>
+<div class="container-fluid">
+    <section class="abasica">
+        <div class="row align-items-center">
+            <!-- Grid column -->
+            <div class="col-lg-12">
+                <!-- Excerpt -->
+                <h3 class="font-weight-bold mb-3">¿Qué es?</h3><br>
+                <p style="text-align: justify;">
+                    El álgebra de conjuntos tal como la de proposiciones es un sistema axiomático consistente,
+                    completo e independiente; se utiliza básicamente para demostrar la igualdad entre conjuntos
+                    o construir y simplificar conjuntos complejos y siempre que tengan determinadas propiedades.
+                    Puede entenderse de dos maneras distintas: como lenguaje formal y como abreviaturas de
+                    expresiones en español.
+                </p>
+                <p style="text-align: justify;">
+                    Los símbolos del lenguaje formal de la teoría de conjuntos serán:
+                    Los símbolos lógicos de la lógica de predicados:
+                <ul>
+                    <li>$¬$ (negación)</li>
+                    <li>$∧$ (conjunción)</li>
+                    <li>$∨$ (disyunción)</li>
+                    <li>$→$ (implicación)</li>
+                    <li>$↔$ (equivalencia)</li>
+                    <br>
+                    <li>
+                        $∀$ (cuantificador universal) <br>
+                        ste cuantificador es comprendido con las palabras “para todo”
+                        y especifica la existencia de todos los elementos en un determinado grupo
+                        o conjunto, a continuación, se muestra un ejemplo para comprender su uso:
+                        $$∀ x∈ N,x∈ Z$$
+                        Esta expresión también se puede leer como: para todo x que pertenece a los
+                        números naturales, x pertenece a los números enteros.
+                        Adicionalmente se puede decir que en lenguaje común se puede leer como todos
+                        los números naturales también son enteros.
+                    </li>
+                    <br>
+                    <li>
+                        $∃$ (cuantificador existencial) <br>
+                        Este cuantificador es comprendido con las palabras “Existe un” y especifica
+                        que dentro de un grupo determinado o un conjunto existe al menos 1 elemento
+                        que cumple la condición que la expresión especifique, como se muestra en el
+                        siguiente ejemplo:
+                        $$∃ x ∈ R∶x ∈Q^'$$
+                        Esta expresión es entendida como: existe un x que pertenece a los números
+                        reales tal que este x pertenece a números los irracionales.
+                    </li>
+                </ul>
+                Con estos signos básicos se generan todas las fórmulas de la teoría de conjuntos. Las reglas de
+                formación de fórmulas son las habituales en la lógica de primer orden.
+                </p>
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+        </div>
+    </section><br>
+    <hr><br>
+    <section class="aleyes">
+        <div class="row align-items-center">
+            <!-- Grid column -->
+            <div class="col-lg-12">
+                <!-- Excerpt -->
+                <h3 class="font-weight-bold mb-3">Leyes del algebra de conjuntos</h3><br>
+                <p style="text-align: justify;">
+                    Sean A, B y C conjuntos cualesquiera; x elemento de los conjuntos dados y los signos
+                    de los operadores de conjuntos:
+                <ol>
+                    <li>$'$ como complemento</li>
+                    <li>$∩$ como intersección</li>
+                    <li>$∪$ como unión</li>
+                    <li>$⊆$ como inclusión o subconjunto</li>
+                    <li>$∈$ como pertinencia</li>
+                </ol>
+                </p>
+                <p style="text-align: justify;">
+                    se presentan las siguientes leyes de los conjuntos <br>
+                    <Center>
+                        <table class="table table-bordered" style="width: 50%;">
+                            <tr class="table-warning">
+                                <th>NOMBRE DE LA LEY</th>
+                                <th>CONJUNTOS</th>
+                            </tr>
+                            <tr class="table-primary">
+                                <td>1. Idempotencia</td>
+                                <td>
+                                    <ul>
+                                        <li>$A ∩ A = A$</li>
+                                        <li>$A ∪ A=A$</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="table-info">
+                                <td>2. Identidad</td>
+                                <td>
+                                    <ul>
+                                        <li>$A ∩ U = A$</li>
+                                        <li>$A ∪ ∅ = A$</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="table-primary">
+                                <td>3. Dominación</td>
+                                <td>
+                                    <ul>
+                                        <li>$A ∩ ∅ = ∅$</li>
+                                        <li>$A ∪ U = U$</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="table-info">
+                                <td>4. Conmutativa</td>
+                                <td>
+                                    <ul>
+                                        <li>$A ∩ B = B ∩ A$</li>
+                                        <li>$A ∪ B = B ∪ A$</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="table-primary">
+                                <td>5. Asociativa</td>
+                                <td>
+                                    <ul>
+                                        <li>$A ∩ B ∩ C = (A ∩ B) ∩ C = A ∩ (B ∩ C)$</li>
+                                        <li>$A ∪ B ∪ C = (A ∪ B) ∪ C = A ∪ (B ∪ C)$</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="table-info">
+                                <td>6. Distributiva</td>
+                                <td>
+                                    <ul>
+                                        <li>$A ∩ (B ∪ C)= (A ∩ B)∪(A ∩ C) $</li>
+                                        <li>$A ∪ (B ∩ C)= (A ∪ B)∩(A ∪ C)$</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="table-primary">
+                                <td>
+                                    7. Complementación:
+                                    <ul>
+                                        <li>Contradicción</li>
+                                        <li>Tercero excluido</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <br>
+                                    <ul>
+                                        <li>$ A ∩ A' = ∅$</li>
+                                        <li>$ A ∪ A' = U $</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="table-info">
+                                <td>8. Involución</td>
+                                <td>
+                                    <ul>
+                                        <li>$\(A'\)'= A$</li>
+                                        <li>$\(\(A'\)'\)'= A'$</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="table-primary">
+                                <td>9. D'Morgan</td>
+                                <td>
+                                    <ul>
+                                        <li>$(A ∩ B)'=A' ∪ B'$</li>
+                                        <li>$(A ∪ B)'=A' ∩ B'$</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="table-info">
+                                <td>10. Absorción</td>
+                                <td>
+                                    <ul>
+                                        <li>$A ∩ (A ∪ B)=A$</li>
+                                        <li>$A ∪ (A ∩ B)=A$</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr class="table-primary">
+                                <td>11. Ley de conjuntos</td>
+                                <td>
+                                    <ul>
+                                        <li>$A ∩ (A' ∪ B)=A ∩ B$</li>
+                                        <li>$A ∪ (A' ∩ B)=A ∪ B$</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </Center>
+                    Las leyes del álgebra de conjuntos se utilizan para demostrar igualdades entre conjuntos.
+                </p>
+
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+        </div>
+    </section>
+    <br><br><br>
+    <div class="row align-items-center">
+        <div class="col-lg-1">
+        </div>
+        <div class="col-lg-3">
+            <a class="buttonM" href="{% url 'indexLand' %}">Página de Inicio</a>
+        </div>
+        <div class="col-lg-4">
+        </div>
+        <div class="col-lg-3">
+            <a class="buttonM" href="{% url 'Ebasico' %}">Ejemplos</a>
+        </div>
+        <div class="col-lg-1">
+        </div>
+    </div>
+</div>
+{% endblock %}

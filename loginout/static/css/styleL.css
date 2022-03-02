@@ -1,0 +1,18 @@
+/*cambio de color en el desplazamiento del navbar*/
+.gris{
+  background:rgba(0, 0, 0, 0.267);
+}
+.top-nav-collapse{
+  background: rgba(8, 121, 129, 0.568) !important;
+}
+@media only screen and (max-width: 768px) {
+  .navbar {
+    background-color: #34456a;
+  }
+}
+/*fin cambio de color */
+*{
+  font-size: 18px;
+}
+
+

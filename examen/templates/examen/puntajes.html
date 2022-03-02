@@ -1,0 +1,65 @@
+{% extends 'inicio.html' %}
+{% load static %}
+
+{% block equation %}
+<link rel="stylesheet" href="{% static 'mathscribe/jqmath-0.4.3.css' %}">
+<script src="{% static 'mathscribe/jquery-1.4.3.min.js' %}"></script>
+<script src="{% static 'mathscribe/jqmath-etc-0.4.6.min.js' %}" charset="utf-8"></script>
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/styleExa.css' %}">{% endblock %}
+{% block title %} Teoría | Conjuntos {% endblock %}
+
+
+{% block header %}
+<section class="textos-header">
+    <h1>Comprende los principios teóricos de los Conjuntos</h1>
+    <h2>Utilizando la tecnología a tu favor</h2>
+</section>
+<div class="ola">
+    <div style="height: 150px; overflow: hidden;">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+            <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #fff;">
+            </path>
+        </svg>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block contenido %}
+    <div class="container-fluid">
+        <h1 class="text-center my-4">
+            <span class="badge badge-info">
+                Puntajes de los {{Tusuarios}} participante/s
+            </span>
+        </h1>
+        <br><br>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Usuario</th>
+                    <th>calificación</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user_exa in usuario_exa %}
+                    <tr>
+                        <th>{{user_exa.usuario.first_name}} {{user_exa.usuario.last_name}}</th>
+                        <th>{{user_exa.puntaje_total}}</th>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <center>
+            {% if request.user.is_staff %}
+                <a href="{% url 'reset' %}" class="buttonC"> <span> Limpiar Registros </span></a>
+            {% endif %}
+            <a href="{% url 'indexLand' %}" class="buttonC"> <span> Página principal </span></a>
+        </center>
+    </div>
+
+{% endblock %}

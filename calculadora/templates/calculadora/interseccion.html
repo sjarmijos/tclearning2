@@ -1,0 +1,71 @@
+{% extends "inicio.html" %}
+{% load static %}
+
+{% block equation %}
+<link rel="stylesheet" href="{% static 'mathscribe/jqmath-0.4.3.css' %}">
+<script src="{% static 'mathscribe/jquery-1.4.3.min.js' %}"></script>
+<script src="{% static 'mathscribe/jqmath-etc-0.4.6.min.js' %}" charset="utf-8"></script>
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/stylecalc.css' %}">{% endblock %}
+{% block title %} Calculadora | Intersección {% endblock %}
+
+
+{% block header %}
+<section class="textos-header">
+    <h1>Comprende los principios teóricos de los Conjuntos</h1>
+    <h2>Utilizando la tecnología a tu favor</h2>
+</section>
+<div class="ola">
+    <div style="height: 150px; overflow: hidden;">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+            <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #fff;">
+            </path>
+        </svg>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block contenido %}
+<h1 style="color: #fff;">Intersección</h1>
+<br>
+<div class="container-fluid" style="color: #fff;">
+    $A ∩ B$ = {{ca}} ∩ {{cb}} <br>
+    $A ∩ B$ = {{resultado}} <br>
+</div>
+<div class="container" style="color: #fff;">
+    <br><br>
+    {% if chart %}
+    <img src="data:image/png;base64, {{chart|safe}}" alt="grafico union" width="90%">
+    <br><br>
+    {% endif %}
+</div>
+<br><br>
+<div class="container-fluid" style="color: #fff; ">
+    <p>
+        Aquí se puede observar la Intersección de ambos conjuntos es decir, es el area coloreada de color <code
+            style="color: rgb(193, 92, 218); font-size: 30px;"> Rosado. </code>
+    </p>
+</div>
+<div class="row align-items-center">
+    <div class="col-lg-2">
+    </div>
+    <div class="col-lg-4">
+        <a class="buttonC" href="{% url 'calcuinter' %}">
+            <span>Nueva Intersección</span>
+        </a>
+    </div>
+
+    <div class="col-lg-4">
+        <a class="buttonP" href="{% url 'menucalc' %}">
+            <span>Menú de operaciones</span>
+        </a>
+    </div>
+    <div class="col-lg-2">
+    </div>
+</div>
+
+{% endblock %}

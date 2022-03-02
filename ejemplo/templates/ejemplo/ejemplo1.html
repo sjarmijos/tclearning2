@@ -1,0 +1,788 @@
+{% extends "inicio.html" %}
+{% load static %}
+
+{% block equation %}
+<link rel="stylesheet" href="{% static 'mathscribe/jqmath-0.4.3.css' %}">
+<script src="{% static 'mathscribe/jquery-1.4.3.min.js' %}"></script>
+<script src="{% static 'mathscribe/jqmath-etc-0.4.6.min.js' %}" charset="utf-8"></script>
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/styleejm.css' %}">{% endblock %}
+{% block title %} Ejemplos | Conjuntos {% endblock %}
+
+
+{% block header %}
+<br><br>
+<section class="textos-header">
+    <h1 style="text-align: right;">Refuerza toda la teoría con ejemplos que</h1>
+    <h2 style="text-align: right;">la tecnología pone a tu disposición</h2>
+</section>
+<div class="ola">
+    <div style="height: 150px; overflow: hidden;">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+            <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #fff;">
+            </path>
+        </svg>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block contenido %}
+<!-- Ejemplos de Representaciones -->
+<div class="container-fluid">
+    <h1>Ejemplos</h1>
+    <section class="Erepresentacion">
+        <h2 style="color: red;">Representaciones</h2>
+        <p>Las formas de representación son un punto un importante
+            dentro de la teoria de conjuntos por ello aqui se presentan
+            algunos ejemplos para que se puedan entender de una mejor manera.
+        </p>
+    </section>
+</div>
+<div class="container-fluid">
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    Ejemplo 1 Representación por tabulación
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <code> 1.- Represente por tabulación el conjunto de los números pares menores o iguales que 10 </code>
+                    <br> <br>
+                    <h3>Solución</h3>
+                    <p>
+                        Al tener que representar un conjunto por tabulación se coloca el nombre del conjunto con una
+                        letra mayúscula y seguido de ella todos los elementos que componen al conjunto, de esta manera
+                        se obtiene el siguiente conjunto: <br><br>
+                        $$ A=\{2, 4, 6, 8, 10\} $$
+                    </p>
+                    <br>
+                    <p>
+                        Como se puede observar la representación por tabulación de un conjunto puede ser muy especifica
+                        pero en casos donde los terminos a expresar son demasiados o son infinitos, este tipo de
+                        representación
+                        resulta demasiado tediosa o en determinados casos muy extensa, por ello se incluyen otros
+                        métodos de
+                        plasmar los elementos de un conjunto como se vera en el siguiente ejemplo.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Ejemplo #2 Representación Comprensión
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <code>2.- Represente por comprensión el conjunto del ejercicio anterior</code>
+                    <br><br>
+                    <h3>Solución</h3>
+                    <p>
+                        El conjunto anterior hace referencia al conjunto de los números pares
+                        menores o iguales que 30 para representar este conjunto por comprensión se debe
+                        colocar el nombre del conjunto y a continuación entre llaves la frase o el enunciado
+                        que describe el conjunto, para este caso se realizaría de la siguiente forma: <br><br>
+                        $ A=\{ \Números\ \ pares\ \ menores\ \ que\ 10 \} $
+                    </p>
+                    <br>
+                    <p>
+                        De esta manera un conjunto se puede representar cuando sus elementos son demasiados o
+                        si tienden al infinito, ya que en ese tipo de casos hacerlo por tabulación tomaría una
+                        cantidad muy larga de tiempo, a continuación se presentan ejemplos adicionales a este
+                        tipo de representación de conjuntos:
+                    <ul>
+                        <li>$ B=\{ \ Números\ \ impares\ \ mayores\ \ que\ 20 \} $</li>
+                        <li>$ C=\{ \ Consonantes\ \ del\ \ alfabeto\ \} $</li>
+                        <li>$ D=\{ \ Números\ \ Reales\ \} $</li>
+                    </ul>
+                    </p>
+                    <br>
+                    <p>
+                        Sin embargo, existen otras formas de expresar un conjunto
+                        sin importar el numero de elementos que este contenga y es con lenguaje matemático como
+                        se visualizara en el siguiente ejemplo.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Ejemplo 3 Lenjuage Matemático
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <code>3.- Represente el conjunto de los números pares menores que 30</code>
+                    <br><br>
+                    <h3>Solución</h3>
+                    <p>
+                        En este caso la manera de representar el conjunto sera colocando el nombre del mismo
+                        y a continuación se colocara entre llaves una fórmula matemática que contenga a todos
+                        los elementos resultando de la siguiente manera: <br><br>
+                        $$ A=\{ x | x = 2n, x ≤ 30, x ∈ ℕ \} $$
+                    </p><br>
+                    <p>
+                        De esta manera se puede expresar un conjunto de cualquier extensión, cabe destacar que
+                        el numero de condiciones que se coloca determina cuantos elementos abarca en su representación
+                        por tabulación, a continuación se presentan varios ejemplos adicionales.
+                    <ul>
+                        <li>$ B=\{ x | x=2n+1, x > 20, x ≤99 \} $</li>
+                        <li>$ C=\{ x | x= ℤ, x ≤ 10 \} $</li>
+                        <li>$ D=\{ x | x= ℝ , x=2n \} $</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Ejemplo 4 Representación Gráfica
+                </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <code>4.- Represente de manera gráfica el conjunto de los números pares menores o iguales que 30</code>
+                    <br><br>
+                    <h3>Solución</h3>
+                    <p>
+                        Para este tipo de representación se debe tener en cuenta que se genera un diagrama de Venn
+                        y dentro de el es donde se ubican los elementos que el conjunto contiene para este caso la
+                        representación gráfica sería la siguiente:
+
+                        <center><img class="img-fluid" src="{% static 'img/Rgrafica2.png' %}" alt="ImagenDoc"
+                                style="width: 35%;"></center>
+                    </p>
+                    <p>
+                        Sin embargo la representación gráfica toma mas valor e importancia cuando se trata de graficar
+                        las operaciones entre conjuntos ya sean operaciones normales, como también operaciones
+                        combinadas
+                        como se verá en los siguientes ejemplos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<!-- Ejemplos de Union de Conjuntos -->
+<div class="container-fluid">
+    <section class="Erepresentacion">
+        <h2 style="color: red;">Unión de Conjuntos</h2>
+        <p>
+            En este punto se revisarán ejemplos de como realizar la unión de dos conjuntos
+            utilizando los conceptos previos de la representación, haciendo énfasis en
+            la representación gráfica.
+        </p>
+    </section>
+</div>
+<div class="container-fluid">
+    <div class="accordion" id="accordionExample2">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingunion1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseunion1" aria-expanded="true" aria-controls="collapseunion1">
+                    Ejemplo 1
+                </button>
+            </h2>
+            <div id="collapseunion1" class="accordion-collapse collapse show" aria-labelledby="headingunion1"
+                data-bs-parent="#accordionExample2">
+                <div class="accordion-body">
+                    <code> 1.- Halle el resultado de la unión de los siguientes conjuntos</code><br><br>
+                    <p>
+                        $ A=\{1, 2, 3, 8, 9 \} $ y <br>
+                        $ B=\{ 5, 10, 16, 20 \} $
+                    </p>
+                    <br>
+                    <h3>Solución</h3>
+                    <br>
+                    <p>
+                        Como se ha revisado anteriormente la unión de conjuntos es aquella que tiene como resultado
+                        un conjunto dentro del cual estan contenidos todos los elementos de los conjuntos que
+                        intervienen
+                        en la operación, por ello el resultado de este caso es el siguiente:
+                    <ul>
+                        <li>
+                            Representación Tabulada <br><br>
+                            $ C = A ∪ B $ <br>
+                            $ C= \{ 1, 2, 3, 8, 9 \} ∪ \{ 5, 10, 16, 20 \}$ <br>
+                            $ C= \{ 1, 2, 3, 5, 8, 9, 10, 16,20 \} $ <br>
+                        </li>
+                        <br>
+                        <li>
+                            Representación Gráfica <br>
+                            Se colocan los dos conjuntos a unir en sus diagramas de Venn
+                            <center><img class="img-fluid" src="{% static 'img/union1.png' %}" alt="ImagenDoc"
+                                    style="width: 45%;"></center>
+                            <br><br>
+                            Se realiza la unión de ambos conjuntos <br>
+                            <center><img class="img-fluid" src="{% static 'img/union2.png' %}" alt="ImagenDoc"
+                                    style="width: 45%;"></center>
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingunion2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseunion2" aria-expanded="false" aria-controls="collapseunion2">
+                    Ejemplo 2
+                </button>
+            </h2>
+            <div id="collapseunion2" class="accordion-collapse collapse" aria-labelledby="headingunion2"
+                data-bs-parent="#accordionExample2">
+                <div class="accordion-body">
+                    <code>2.- Halle la unión de los conjuntos presentados a continuación </code><br><br>
+                    <p>
+                        $ D=\{b, d, f, g \} $ y <br>
+                        $ E=\{ a, b, f, i, o \} $
+                    </p>
+                    <h3>Solución</h3><br>
+                    <p>
+                        Para poder realizar la unión de los conjuntos planteados se debe tener en cuenta que
+                        el conjunto resultante contiene todos los elementos de los conjuntos operantes en este
+                        caso $D$ y $E$, pero cabe aclarar que si en el conjunto resultante no se pueden repetir
+                        elementos, es decir si existen dos o mas elementos iguales solo se conservará uno, por lo tanto
+                        el conjunto resultante se obtiene de la siguiente manera: <br><br>
+                    <ul>
+                        <li>
+                            Representación Tabulada: <br><br>
+                            $ F = D ∪ E $ <br>
+                            $ F = \{ b, d, f, g \} ∪ \{ a, b, f, i, o \}$ <br>
+                            $ F = \{ a, b, d, f, g, i, o \} $ <br>
+                        </li>
+                        <br>
+                        <li>
+                            Representación gráfica: <br>
+                            Se colocan los dos conjuntos a unir en sus diagramas de Venn
+                            <center><img class="img-fluid" src="{% static 'img/union3.png' %}" alt="ImagenDoc"
+                                    style="width: 45%;"></center>
+                            <br><br>
+                            Se realiza la unión de ambos conjuntos <br>
+                            <center><img class="img-fluid" src="{% static 'img/union4.png' %}" alt="ImagenDoc"
+                                    style="width: 45%;"></center>
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<!-- Ejemplos de Intersección de conjuntos -->
+<div class="container-fluid">
+    <section class="Erepresentacion">
+        <h2 style="color: red;">Intersección de Conjuntos</h2>
+        <p>
+            Aquí puedes observar los ejemplos de cómo realizar la intersección de
+            conjuntos, para hallar su resultado tanto en su representación por
+            tabulación como a identificarlo en su representación gráfica.
+        </p>
+    </section>
+</div>
+<div class="container-fluid">
+    <div class="accordion" id="accordionExample3">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headinginter1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseinter1" aria-expanded="true" aria-controls="collapseinter1">
+                    Ejemplo 1
+                </button>
+            </h2>
+            <div id="collapseinter1" class="accordion-collapse collapse show" aria-labelledby="headinginter1"
+                data-bs-parent="#accordionExample3">
+                <div class="accordion-body">
+                    <code> 1.- Halle el resultado de la intersección de los siguientes conjuntos</code><br><br>
+                    <p>
+                        $ A=\{a, e, i, o, u \} $ y <br>
+                        $ B=\{ h, i, s, t, u \} $
+                    </p>
+                    <br>
+                    <h3>Solución</h3>
+                    <br>
+                    <p>
+                        Como se ha revisado en la sección de teoría, la intersección de dos conjuntos
+                        da como resultado un nuevo conjunto donde se incluyen únicamente los elementos
+                        que los conjuntos operantes tienen en común o se puede decir que solo se incluyen
+                        los elementos que se repiten en los dos conjuntos operantes, por lo tanto este
+                        ejercicio se puede resolver de la siguiente manera:
+                    <ul>
+                        <li>
+                            Representación Tabulada <br><br>
+                            $ C = A ∩ B $ <br>
+                            $ C= \{ a, e, i, o, u \} ∩ \{ h, i, s, t, u \}$ <br>
+                            $ C= \{ i, u \} $ <br>
+                        </li>
+                        <br>
+                        <li>
+                            Representación Gráfica <br>
+                            Se colocan los dos conjuntos operantes en sus diagramas de Venn
+                            <center><img class="img-fluid" src="{% static 'img/inter1.png' %}" alt="ImagenDoc"
+                                    style="width: 45%;"></center>
+                            <br><br>
+                            Se realiza la interseccion de ambos conjuntos <br>
+                            <center><img class="img-fluid" src="{% static 'img/inter2.png' %}" alt="ImagenDoc"
+                                    style="width: 45%;"></center>
+                            <br>Cabe destacar que el resultado de la intersección en su representación gráfica
+                            es aquella que esta coloreada, en este caso de color celeste.
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headinginter2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseinter2" aria-expanded="false" aria-controls="collapseinter2">
+                    Ejemplo 2
+                </button>
+            </h2>
+            <div id="collapseinter2" class="accordion-collapse collapse" aria-labelledby="headinginter2"
+                data-bs-parent="#accordionExample3">
+                <div class="accordion-body">
+                    <code>2.- Halle la intersección de los conjuntos presentados a continuación </code><br><br>
+                    <p>
+                        $ D=\{2, 4, 6, 8 \} $ y <br>
+                        $ E=\{ 1, 2, 3, 4, 5, 6 \} $
+                    </p>
+                    <h3>Solución</h3><br>
+                    <p>
+                        Para este caso la Solución se puede plantear de la siguiente manera:
+                    <ul>
+                        <li>
+                            Representación Tabulada: <br><br>
+                            $ F = D ∩ E $ <br>
+                            $ F = \{ 2, 4, 6, 8 \} ∩ \{ 1, 2, 3, 4, 5, 6 \}$ <br>
+                            $ F = \{ 2, 4, 6 \} $ <br>
+                        </li>
+                        <br>
+                        <li>
+                            Representación gráfica: <br>
+                            Se colocan los conjuntos de los cuales se quiere su intersección en sus diagramas de Venn
+                            <center><img class="img-fluid" src="{% static 'img/inter3.png' %}" alt="ImagenDoc"
+                                    style="width: 45%;"></center>
+                            <br><br>
+                            Se realiza la operación de ambos conjuntos <br>
+                            <center><img class="img-fluid" src="{% static 'img/inter4.png' %}" alt="ImagenDoc"
+                                    style="width: 45%;"></center>
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<!-- Ejemplos de Diferencia de conjuntos -->
+<div class="container-fluid">
+    <section class="Erepresentacion">
+        <h2 style="color: red;">Diferencia de Conjuntos</h2>
+        <p>
+            A continuación se presentan ejemplos para comprender de mejor
+            manera el proceso que se debe seguir para poder hallar el resultado de
+            una diferencia o resta de conjuntos, tanto en su forma tabulada como en su
+            representación gráfica.
+        </p>
+    </section>
+</div>
+<div class="container-fluid">
+    <div class="accordion" id="accordionExample4">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingdif1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsedif1"
+                    aria-expanded="true" aria-controls="collapsedif1">
+                    Ejemplo 1
+                </button>
+            </h2>
+            <div id="collapsedif1" class="accordion-collapse collapse show" aria-labelledby="headingdif1"
+                data-bs-parent="#accordionExample4">
+                <div class="accordion-body">
+                    <code> 1.- Halle el resultado de la diferencia $A-B$ con las siguientes especificaciones</code><br><br>
+                    <p>
+                        $ A=\{ x, 7, z, 2, a \} $ y <br>
+                        $ B=\{ 1, 2, a, 4, 9 \} $
+                    </p>
+                    <br>
+                    <h3>Solución</h3>
+                    <br>
+                    <p>
+                        Para poder encontrar la respuesta correcta a este ejercicio se debe recordar que una
+                        diferencia entre dos conjuntos genera otro conjunto como resultado el cual tiene como
+                        sus elementos todos los elementos del primer conjunto que no se encuentren en el segundo,
+                        en este caso la diferencia $A-B$ tiene como resultado un conjunto $C$ con los elementos
+                        de A que no se encuentran en B, por esta razón este ejemplo se resuelve de la siguiente manera:
+                    <ul>
+                        <li>
+                            Representación Tabulada <br><br>
+                            $ C = A - B $ <br>
+                            $ C= \{ x, 7, z, 2, a \} - \{ 1, 2, a, 4, 9 \}$ <br>
+                            $ C= \{ x, 7, z \} $ <br>
+                        </li>
+                        <br>
+                        <li>
+                            Representación Gráfica <br>
+                            Se colocan los dos conjuntos operantes en sus diagramas de Venn
+                            <center><img class="img-fluid" src="{% static 'img/dif1.png' %}" alt="ImagenDoc"
+                                    style="width: 45%;"></center>
+                            <br><br>
+                            Se realiza la interseccion de ambos conjuntos <br>
+                            <center><img class="img-fluid" src="{% static 'img/dif2.png' %}" alt="ImagenDoc"
+                                    style="width: 45%;"></center>
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingdif2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsedif2" aria-expanded="false" aria-controls="collapsedif2">
+                    Ejemplo 2
+                </button>
+            </h2>
+            <div id="collapsedif2" class="accordion-collapse collapse" aria-labelledby="headingdif2"
+                data-bs-parent="#accordionExample4">
+                <div class="accordion-body">
+                    <code>2.- Halle el resultado de la diferencia $B-A$ con las siguientes especificaciones </code><br><br>
+                    <p>
+                        $ A=\{ x, 7, z, 2, a \} $ y <br>
+                        $ B=\{ 1, 2, a, 4, 9 \} $
+                    </p>
+                    <h3>Solución</h3><br>
+                    <p>
+                        En este caso se tienen planteados los mismos conjuntos operantes $A y B$ esto se ha planteado de
+                        esta
+                        manera para hacer énfasis en el hecho de que la diferencia de conjuntos no es conmutativa, es
+                        decir
+                        realizar la resta $A - B$ no es lo mismo que realizar la diferencia $B - A$, por esta razón el
+                        resultado
+                        del ejemplo planteado en este caso es el siguiente:
+                    <ul>
+                        <li>
+                            Representación Tabulada <br><br>
+                            $ C = A - B $ <br>
+                            $ C= \{ 1, 2, a, 4, 9 \} - \{ x, 7, z, 2, a \}$ <br>
+                            $ C= \{ 1, 4, 9 \} $ <br>
+                        </li>
+                        <br>
+                        <li>
+                            Representación gráfica: <br>
+                            Se colocan los conjuntos de los cuales se quiere su intersección en sus diagramas de Venn
+                            <center><img class="img-fluid" src="{% static 'img/dif1.png' %}" alt="ImagenDoc"
+                                    style="width: 45%;"></center>
+                            <br><br>
+                            Se realiza la operación de ambos conjuntos <br>
+                            <center><img class="img-fluid" src="{% static 'img/dif3.png' %}" alt="ImagenDoc"
+                                    style="width: 45%;"></center>
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<!-- Ejemplos de Diferencia Simétrica de conjuntos -->
+<div class="container-fluid">
+    <section class="Erepresentacion">
+        <h2 style="color: red;">Diferencia Simétrica de Conjuntos</h2>
+        <p>
+            En este punto se presentan algunos ejemplos para la mejor comprensión
+            del proceso para hallar el resultado de una diferencia simétrica
+            entre dos conjuntos enfocados en su representación tabulada y en su forma
+            gráfica.
+        </p>
+    </section>
+</div>
+<div class="container-fluid">
+    <div class="accordion" id="accordionExample5">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingdsim1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsedsim1"
+                    aria-expanded="true" aria-controls="collapsedsim1">
+                    Ejemplo 1
+                </button>
+            </h2>
+            <div id="collapsedsim1" class="accordion-collapse collapse show" aria-labelledby="headingdsim1"
+                data-bs-parent="#accordionExample5">
+                <div class="accordion-body">
+                    <code> 1.- Halle el resultado de la diferencia simétrica entre los siguientes conjuntos</code><br><br>
+                    <p>
+                        $ A=\{ Lizy, Laura, Letty, Luis \} $ y <br>
+                        $ B=\{ Luis, Zack, Josh, Lizy \} $
+                    </p>
+                    <br>
+                    <h3>Solución</h3>
+                    <br>
+                    <p>
+                        La diferencia simétrica tiene como resultado un conjunto que esta compuesto por todos los
+                        elementos que no tengan en común tanto de A como de B, esto quiere decir que se toman
+                        todos los elementos de A y B que no se repitan en ambos conjnutos, por esta razón este ejemplo
+                        tiene como resultado lo siguiente:
+                    <ul>
+                        <li>
+                            Representación Tabulada <br><br>
+                            $ C = A \ Δ\ B $ <br>
+                            $ C= \{ Lizy, Laura, Letty, Luis \} \ Δ\ $ <br>
+                            $\{ Luis, Zack, Josh, Lizy \}$ <br>
+                            $ C= \{ Laura, Letty, Zack, Josh \} $ <br>
+                        </li>
+                        <br>
+                        <li>
+                            Representación Gráfica <br>
+                            Se colocan los dos conjuntos operantes en sus diagramas de Venn
+                            <center><img class="img-fluid" src="{% static 'img/dsim2.png' %}" alt="ImagenDoc"
+                                    style="width: 45%;"></center>
+                            <br><br>
+                            Se realiza la Diferencia Simétrica de ambos conjuntos <br>
+                            <center><img class="img-fluid" src="{% static 'img/dsim1.png' %}" alt="ImagenDoc"
+                                    style="width: 45%;"></center>
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingdsim2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsedsim2" aria-expanded="false" aria-controls="collapsedsim2">
+                    Ejemplo 2
+                </button>
+            </h2>
+            <div id="collapsedsim2" class="accordion-collapse collapse" aria-labelledby="headingdsim2"
+                data-bs-parent="#accordionExample5">
+                <div class="accordion-body">
+                    <code>2.- Halle la diferencia simétrica de los siguientes conjuntos </code><br><br>
+                    <p>
+                        $ E=\{ 3.4, 1, 6/7 \} $ y <br>
+                        $ F=\{ 6/7, 2, 4, 8.1 \} $
+                    </p>
+                    <h3>Solución</h3><br>
+                    <p>
+                        De la misma manera que se ha realizado en el anterior ejemplo se aplica la diferencia
+                        simétrica para los dos conjuntos planteados formando un nuevo conjunto con los elementos
+                        que no se repiten en los dos conjuntos o que si se analiza su representación gráfica
+                        se toman puede decir que se toman todos los elementos de $E$ y $F$ que no se encuentran
+                        en su intersección de la siguiente manera:
+                    <ul>
+                        <li>
+                            Representación Tabulada <br><br>
+                            $ G = E \ Δ\ F $ <br>
+                            $ G = \{ 3.4, 1, 6/7 \} \ Δ\ \{ 6/7, 2, 4, 8.1 \}$ <br>
+                            $ G = \{ 3.4, 1, 2, 4, 8.1 \} $ <br>
+                        </li>
+                        <br>
+                        <li>
+                            Representación gráfica: <br>
+                            Se colocan los conjuntos de los cuales se quiere su intersección en sus diagramas de Venn
+                            <center><img class="img-fluid" src="{% static 'img/dsim3.png' %}" alt="ImagenDoc"
+                                    style="width: 45%;"></center>
+                            <br><br>
+                            Se realiza la operación de ambos conjuntos <br>
+                            <center><img class="img-fluid" src="{% static 'img/dsim4.png' %}" alt="ImagenDoc"
+                                    style="width: 45%;"></center>
+                        </li>
+                    </ul>
+                    </p>
+                    <p>
+                        En este punto cabe destacar que la diferencia simétrica si es conmutativa es decir cuando se
+                        realiza
+                        $E \ Δ\ F$ es lo mismo que realizar $F \ Δ\ E$, por ello en el gráfico final se puede
+                        observar que
+                        se
+                        han colocado dos rotulos al resultado para hacer énfasis en esta característica que se ha
+                        mencionado.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<!-- Ejemplos de Operaciones Combinadas -->
+<div class="container-fluid">
+    <section class="Erepresentacion">
+        <h2 style="color: red;">Operaciones Combinadas de Conjuntos</h2>
+        <p>
+            A continuación se presentan varios ejemplos de operaciones combinadas
+            entre conjuntos, tanto en su representación por tabulación como los pasos
+            para resolverlo por su representación gráfica.
+        </p>
+    </section>
+</div>
+<div class="container-fluid">
+    <div class="accordion" id="accordionExample1">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingcomb1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsecomb1"
+                    aria-expanded="true" aria-controls="collapsecomb1">
+                    Ejemplo 1
+                </button>
+            </h2>
+            <div id="collapsecomb1" class="accordion-collapse collapse show" aria-labelledby="headingcomb1"
+                data-bs-parent="#accordionExample1">
+                <div class="accordion-body">
+                    <code> 1.- Halle el resultado la siguiente operación $ (A ∪ B) ∩ C $</code><br><br>
+                    <p>
+                        $ A=\{ 2, 4, 6 \} $, <br>
+                        $ B=\{ 1, 3, 5 \} $ y <br>
+                        $ C=\{ 2, 5, 7, 8 \} $
+                    </p>
+                    <br>
+                    <h3>Solución</h3>
+                    <br>
+                    <p>
+                        Para realizar operaciones combinadas hay que tener en cuenta cuales son las operaciones
+                        que se estan solicitando en el ejercicio y el orden en el que se encuentran, debido a
+                        que no todas son conmutativas, adicionalmente es recomendale que si una operacion se encuentra
+                        entre signos de agrupación se respete las leyes de resolución de los mismos, en este caso la
+                        Solución se da por el siguiente proceso:
+                    <ul>
+                        <li>
+                            Representación Tabulada <br><br>
+                            <ol>
+                                <li>
+                                    En primer lugar se halla la operacion entre parentesis en este caso la unión entre A
+                                    y B <br>
+                                    $ A ∪ B = \{ 2, 4, 6 \} ∪ \{ 1, 3, 5 \} $ <br>
+                                    $ A ∪ B = \{ 1, 2, 3, 4, 5, 6 \} $ <br>
+                                </li> <br>
+                                <li>
+                                    A continuación con el conjunto resultante de la unión se realiza la intersección con
+                                    el conjunto C
+                                    $ (A ∪ B) ∩ C = \{ 1, 2, 3, 4, 5, 6 \} ∩ \{ 2, 5, 7, 8 \} $ <br>
+                                    $ (A ∪ B) ∩ C = \{ 2, 5 \} $
+                                </li>
+                            </ol>
+                        </li>
+                        <br>
+                        <li>
+                            Representación Gráfica <br>
+                            1. De igual manera se realiza la primera operación en este caso la unión de A y B
+                            <center><img class="img-fluid" src="{% static 'img/comb1.png' %}" alt="ImagenDoc"
+                                    style="width: 40%;"></center>
+                            <br><br>
+                            2. A continuación, se realiza la intersección entre el conjunto resultante de la operación
+                            anterior y el conjunto C <br>
+                            <center><img class="img-fluid" src="{% static 'img/comb2.png' %}" alt="ImagenDoc"
+                                    style="width: 30%;"></center>
+                            Nota: Cabe destacar que el resultado es el area coloreada en este caso de color celeste, y que coincide 
+                            con el resultado de su representación por tabulación.
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingcomb2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsecomb2" aria-expanded="false" aria-controls="collapsecomb2">
+                    Ejemplo 2
+                </button>
+            </h2>
+            <div id="collapsecomb2" class="accordion-collapse collapse" aria-labelledby="headingcomb2"
+                data-bs-parent="#accordionExample1">
+                <div class="accordion-body">
+                    <code>2.- Halle el resultado la siguiente operación $ (B ∩ C) ∪ (A ∩ B) $ </code><br><br>
+                    <p>
+                        $ A=\{ 1, 2, 4, 6 \} $, <br>
+                        $ B=\{ 1, 7, 5, 6 \} $ y <br>
+                        $ C=\{ 4, 6, 7, 8 \} $
+                    </p>
+                    <h3>Solución</h3><br>
+                    <p>
+                        De la misma manera que se ha realizado en el anterior ejemplo, debe tener en cuenta
+                        el orden en el cual se va a resolver las operaciones planteadas en este caso se tiene
+                        dos intersecciones que se deben realizar para luego proceder con la unión de ambos resultados 
+                        y asi obtener la respuesta final del ejercicio, por ello el proceso es el siguiente:
+                    <ul>
+                        <li>
+                            Representación Tabulada <br><br>
+                            <ol>
+                                <li>
+                                    En primera instancia se halla la intersección entre B y C: <br>
+                                    $ B ∩ C = \{ 1, 7, 5, 6 \} ∩ \{ 4, 6, 7, 8 \} $ <br>
+                                    $ B ∩ C = \{ 6, 7 \} $ <br>
+                                </li><br>
+                                <li>
+                                    Luego se halla la siguiente intersección la cual es entre A y B: <br>
+                                    $ A ∩ B = \{ 1, 2, 4, 6 \} ∩ \{ 1, 7, 5, 6 \} $ <br>
+                                    $ A ∩ B = \{ 1, 6 \} $ <br>
+                                </li><br>
+                                <li>
+                                    Finalmente se realiza la unión entre los dos conjuntos resultantes 
+                                    de las anteriores intersecciones: <br>
+                                    $ (B ∩ C) ∪ (A ∩ B) = \{ 6, 7 \} ∪ \{ 1, 6 \} $ <br>
+                                    $ (B ∩ C) ∪ (A ∩ B) = \{ 1, 6, 7 \} $ <br>
+                                </li>
+                            </ol>
+                        </li>
+                        <br>
+                        <li>
+                            Representación gráfica: <br>
+                            Se realiza la primera intersección que se encuentra en el ejercicio en este caso entre B y C
+                            <center><img class="img-fluid" src="{% static 'img/comb3.png' %}" alt="ImagenDoc"
+                                    style="width: 30%;"></center>
+                            <br><br>
+                            Se realiza la siguiente operación de intersección en este caso entre A y B <br>
+                            <center><img class="img-fluid" src="{% static 'img/comb4.png' %}" alt="ImagenDoc"
+                                    style="width: 30%;"></center>
+                            <br><br>
+                            Finalmente se realiza la unión entre los resultados de las intersecciones anteriores <br>
+                            <center><img class="img-fluid" src="{% static 'img/comb5.png' %}" alt="ImagenDoc"
+                                style="width: 45%;"></center>
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="row align-items-center">
+    <div class="col-lg-2">
+    </div>
+    <div class="col-lg-4">
+        <a href="{% url 'indexLand' %}" class="buttonC"> <span>Página principal</span> </a>
+    </div>
+    <div class="col-lg-4">
+        <a href="{% url 'ejmvideo' %}" class="buttonC"> <span>Videos de ejemplo</span> </a>
+    </div>
+    <div class="col-lg-2">
+    </div>
+</div>
+
+
+
+{% endblock %}

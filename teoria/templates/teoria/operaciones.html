@@ -1,0 +1,287 @@
+{% extends "inicio.html" %}
+{% load static %}
+
+{% block equation %}
+<link rel="stylesheet" href="{% static 'mathscribe/jqmath-0.4.3.css' %}">
+<script src="{% static 'mathscribe/jquery-1.4.3.min.js' %}"></script>
+<script src="{% static 'mathscribe/jqmath-etc-0.4.6.min.js' %}" charset="utf-8"></script>
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/styleconj.css' %}">{% endblock %}
+{% block title %} Teoría | Conjuntos {% endblock %}
+
+
+{% block header %}
+<section class="textos-header">
+    <h1>Comprende los principios teóricos de los Conjuntos</h1>
+    <h2>Utilizando la tecnología a tu favor</h2>
+</section>
+<div class="ola">
+    <div style="height: 150px; overflow: hidden;">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+            <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #fff;">
+            </path>
+        </svg>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block contenido %}
+<center>
+    <h1>Operaciones de conjuntos</h1>
+</center>
+<br><br>
+<div class="container-fluid">
+    <section class="crepresentacion">
+        <div class="row align-items-center">
+            <!-- Grid column -->
+            <div class="col-lg-4">
+                <!-- Featured image -->
+                <img class="img-fluid" src="{% static 'img/ConceptosBasicos2.png' %}" alt="ImagenDoc">
+            </div>
+            <div class="col-lg-8">
+                <!-- Excerpt -->
+                <h3 class="font-weight-bold mb-3">Representación de conjuntos</h3><br>
+                <p style="text-align: justify;">
+                    En primer lugar se debe tener claro el concepto y la forma de representar un conjunto,
+                    para ello se establece que la representación gráfica y matemática van de la mano para comprender
+                    las operaciones entre conjuntos existentes.
+                    <br>
+                    Una forma frecuente de representar un conjunto es mediante un óvalo, una porción del plano con
+                    forma más o menos redondeada.
+                    De esta manera se puede decir que las representaciones matemáticas del conjunto A compuesto por
+                    números naturales menores o iguale que 5 pueden ser:
+                    $$ A= \{ 1, 2, 3, 4, 5\} $$
+                    $$ A= \{\Números\ \ naturales\ \ menores\ \ o\ \ iguales\ \ que\ 5\} $$
+                    $$ A= \{m : m ∈ ℕ \ y\ 1 ≤ m ≤ 5\} $$
+                </p>
+                <p style="text-align: justify;">
+                    Por otro lado este mismo conjunto esta representado de manera gráfica de la manera en la que se
+                    muestra
+                    en la imagen de referencia.
+                </p>
+                <p style="text-align: justify;">
+                    Teniendo esto en cuenta se puede establecer que la representación gráfica de los conjuntos esta dada
+                    por
+                    este tipo de figuras y a las cuales se las denomina o define como Diagramas de Venn, mediante las
+                    cuales
+                    se puede representar no solamente los conjuntos en si sino también sus operaciones, como se vera a
+                    continuación.
+                </p>
+            </div>
+
+            <!-- Grid column -->
+            <!-- Grid column -->
+        </div>
+    </section>
+    <br>
+    <hr><br>
+    <section class="cunion">
+        <div class="row align-items-center">
+            <!-- Grid column -->
+            <div class="col-lg-8">
+                <!-- Excerpt -->
+                <h3 class="font-weight-bold mb-3">Unión de conjuntos</h3><br>
+                <p style="text-align: justify;">
+                    La unión de dos conjuntos A y B, que se denota por $A ∪ B$,
+                    es el conjunto formado por los elementos que pertenecen
+                    a A o a B. (Elementos que pertenecen a cualquiera de los dos conjuntos.)
+                    Simbólicamente se representa:
+                    $$ A ∪ B = \{x | x ∈ A \ o\ x ∈ B\} $$
+                </p>
+                <p style="text-align: justify;">
+                    De esta operación de conjuntos se pueden establecer las siguientes propiedades:
+                <ul>
+                    <li>
+                        $A ∪ B = B ∪ A$
+                    </li>
+                    <li>
+                        $A ∪ ∅ = A$
+                    </li>
+                    <li>
+                        $A ∪ A^c = U$
+                    </li>
+                    <li>
+                        $\Si\ B ⊂ A$ <br>
+                        entonces $A ∪ B = A$
+                    </li>
+                </ul>
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <!-- Featured image -->
+                <img class="img-fluid" src="{% static 'img/union.png' %}" alt="ImagenDoc">
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+        </div>
+    </section>
+    <br>
+    <hr><br>
+    <section class="cinterseccion">
+        <div class="row align-items-center">
+            <div class="col-lg-4">
+                <!-- Featured image -->
+                <img class="img-fluid" src="{% static 'img/interseccion.png' %}" alt="ImagenDoc">
+            </div>
+            <!-- Grid column -->
+            <div class="col-lg-8">
+                <!-- Excerpt -->
+                <h3 class="font-weight-bold mb-3">Intersección de conjuntos</h3><br>
+                <p style="text-align: justify;">
+                    La intersección de dos conjuntos A y B, que de
+                    denota por $A ∩ B$, es el conjunto formado por los elementos que pertenecen
+                    a A y a B. (Elementos comunes a ambos conjuntos.) Simbólicamente se representa:
+                    $$ A ∩ B = \{x | x ∈ A ∧ x ∈ B\} $$
+                </p>
+                <p style="text-align: justify;">
+                    De esta operación de conjuntos se pueden establecer las siguientes propiedades:
+                <ul>
+                    <li>$A ∩ B = B ∩ A$</li>
+                    <li>$A ∩ ∅ = ∅$</li>
+                    <li>$A ∩ Ac = ∅$</li>
+                    <li>
+                        $\Si\ B ⊂ A$<br>
+                        $\entonces\ A ∩ B = B$
+                    </li>
+                    <li>
+                        $\Si\ A ∩ B = ∅$ se dice que <br>
+                        los conjuntos A y B son disjuntos.
+                    </li>
+                </ul>
+                </p>
+            </div>
+            
+            <!-- Grid column -->
+            <!-- Grid column -->
+        </div>
+    </section>
+    <br>
+    <hr><br>
+    <section class="cdiferencia">
+        <div class="row align-items-center">
+            <!-- Grid column -->
+            <div class="col-lg-8">
+                <!-- Excerpt -->
+                <h3 class="font-weight-bold mb-3">Diferencia de conjuntos</h3><br>
+                <p style="text-align: justify;">
+                    La diferencia de dos conjuntos A y B, que de denota por A − B, es
+                    el conjunto formado por los elementos que pertenecen a A, pero no a B.
+                    (Elementos de A que no son de B.) Simbólicamente se representa (no cambiar)
+                    $$A - B = \{x | x ∈ A ∧ x ∉ B\}$$ <br>
+                    Igualmente,
+                    $$B - A = \{x | x ∈ B ∧ x ∉ A\}$$
+
+                </p>
+                <p style="text-align: justify;">
+                    Dado esto se puede asegurar que:
+                    $$ A ∪ B = \(A – B\) ∪ \(A ∩ B\) ∪ \(B – A\)$$ <br>
+                    es decir la unión de A y B es igual a la unión de la diferencia $A - B$ la diferencia $B - A$ y la
+                    intersección $A ∩ B$
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <!-- Featured image -->
+                <img class="img-fluid" src="{% static 'img/diferencia.png' %}" alt="ImagenDoc">
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+        </div>
+    </section>
+    <br>
+    <hr><br>
+    <section class="csimetrica">
+        <div class="row align-items-center">
+            <div class="col-lg-4">
+                <!-- Featured image -->
+                <img class="img-fluid" src="{% static 'img/dsimetrica.png' %}" alt="ImagenDoc">
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-lg-8">
+                <!-- Excerpt -->
+                <h3 class="font-weight-bold mb-3">Diferencia Simétrica de conjuntos</h3><br>
+                <p style="text-align: justify;">
+                    La diferencia simétrica entre dos conjuntos, A y B, es un nuevo conjunto, $A \ Δ\ B$,
+                    donde los elementos que lo componen son todos los elementos del conjunto A lo cuales
+                    no se encuentran en el conjunto B unidos con los elementos del conjunto B los cuales
+                    no pertenecen al conjunto A, este mismo enunciado se puede expresar de la siguiente manera:
+                    <br><br>
+                    $$ A \ Δ\ B = \(A - B\) \ Δ\ \(B – A\) $$
+
+                </p>
+            </div>
+            <!-- Grid column -->
+        </div>
+    </section>
+    <br>
+    <hr><br>
+    <section class="ccombinadas">
+        <div class="row align-items-center">
+            <!-- Grid column -->
+            <div class="col-lg-8">
+                <!-- Excerpt -->
+                <h3 class="font-weight-bold mb-3">Operaciones Combinadas</h3><br>
+                <p style="text-align: justify;">
+                    Estas operaciones se pueden extender a más de dos conjuntos y, además,
+                    se pueden combinar y de esta manera expresar más datos o de reducirlos
+                    según sea el caso de las operaciones presentadas, a continuación, se
+                    presenta un ejemplo práctico desarrollado tanto de manera textual como
+                    de manera gráfica:
+                    <br><br>
+                    Dados los conjuntos A, B, C de la siguiente manera: <br>
+                    $A=\{1,2,3,4\}$ <br> $B=\{2,4,6,8\}$ <br> $C=\{1,2,6,10,12\}$ <br> <br>
+
+                    Hallar: $\(A ∪ B\)∩C$ <br><br>
+                    Resolución
+                <ol>
+                    <li>
+                        El primer lugar se realiza la primera operación de la siguiente manera: <br>
+                        $\(A ∪ B\)=\{1,2,3,4,6,8\}$
+                    </li>
+                    <li>
+                        A continuación, con el resultado anterior se realiza la siguiente operación
+                        en este caso la intersección entre el conjunto resultante y el conjunto C <br>
+                        $\(A ∪ B\)∩C=\{1,2,6\}$
+                    </li>
+                </ol>
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <!-- Featured image -->
+                <img class="img-fluid" src="{% static 'img/combinada.png' %}" alt="ImagenOperacionesCombinadas">
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+        </div>
+        <div class="row aling-items-center">
+            De esta manera se pueden presentar las operaciones combinadas de los conjuntos utilizando
+            tres o más de estos a continuación, se pueden observar algunas de ellas:
+            <br><br><br>
+            <center>
+                <img class="img-fluid" src="{% static 'img/combinada2.png' %}" alt="ImagenDoc"
+                    style="width: 50%;">
+            </center>
+        </div>
+        <br><br><br>
+        <div class="row align-items-center">
+            <div class="col-lg-1">
+            </div>
+            <div class="col-lg-3">
+                <a class="buttonM" href="{% url 'Tconjuntos' %}">Conceptos Basicos</a>
+            </div>
+            <div class="col-lg-4">
+            </div>
+            <div class="col-lg-3">
+                <a class="buttonM" href="{% url 'Talgebra' %}">Algebra de Conjuntos</a>
+            </div>
+            <div class="col-lg-1">
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

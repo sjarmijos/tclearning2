@@ -1,0 +1,78 @@
+{% extends 'inicio.html' %}
+{% load static %}
+
+{% block equation %}
+<link rel="stylesheet" href="{% static 'mathscribe/jqmath-0.4.3.css' %}">
+<script src="{% static 'mathscribe/jquery-1.4.3.min.js' %}"></script>
+<script src="{% static 'mathscribe/jqmath-etc-0.4.6.min.js' %}" charset="utf-8"></script>
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/styleExa.css' %}">{% endblock %}
+{% block title %} Teoría | Conjuntos {% endblock %}
+
+
+{% block header %}
+<section class="textos-header">
+    <h1>Comprende los principios teóricos de los Conjuntos</h1>
+    <h2>Utilizando la tecnología a tu favor</h2>
+</section>
+<div class="ola">
+    <div style="height: 150px; overflow: hidden;">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+            <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #fff;">
+            </path>
+        </svg>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block contenido %}
+
+{% if error %}
+<div class="alert alert-danger" role="alert">
+    {{error}}
+</div>
+<div class="container">
+    <h4>Contenido Bloqueado por falta de inicio de sesión</h4>
+</div>
+<center><a class="buttonC" href="{% url 'login' %}"><span>Iniciar Sesión</span></a></center>
+
+{% else %}
+    {% if pregunta is None %}
+    <div class="container-fluid">
+        <div class="jumbotron my-4">
+            <h1>Ya has respondido a todas las preguntas, ya puedes ver tu calificación</h1>
+            <a href=" {% url 'puntajes' %} " class="buttonC"> <span>Ver Aquí</span> </a>
+        </div>
+    </div>
+    {% else %}
+    <div class="container-fluid">
+        <div class="jumbotron my-4">
+            <h3>
+                {{pregunta.texto}}
+            </h3>
+            <form method="POST" class="form">
+                {% csrf_token %}
+                <input type="hidden" name="pregunta_pk" value="{{pregunta.pk}}">
+
+                {% for opciones in pregunta.opciones.all %}
+                <div class="form-ceck mx-4">
+                    <input class="form-check-input" type="radio" name="respuesta_pk" value="{{opciones.pk}}"
+                        id="choise-{{forloop.counter}}">
+                    <label class="form-check-label" for="choise-{{forloop.counter}}">
+                        {{opciones.texto}}
+                    </label>
+                </div>
+                {% endfor %}
+
+                <button type="submit" class="btn btn-success">Enviar</button>
+            </form>
+        </div>
+    </div> 
+    {% endif %}
+{% endif %}
+
+{% endblock %}

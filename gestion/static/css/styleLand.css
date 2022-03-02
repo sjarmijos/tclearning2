@@ -1,0 +1,56 @@
+/*cambio de color en el desplazamiento del navbar*/
+.gris{
+    background:rgba(0, 0, 0, 0.267);
+  }
+  .top-nav-collapse{
+    background: rgba(8, 121, 129, 0.568) !important;
+  }
+  @media only screen and (max-width: 768px) {
+    .navbar {
+      background-color: #34456a;
+    }
+  }
+  /*fin cambio de color */
+  .container-fluid{
+    font-size: 24px;
+    font-weight: 350;
+  }
+  .buttonM{
+    background: #fff; /* color de fondo */
+    color: black; /* color de fuente */
+    border: 2px solid #37f3b4; /* tamaño y color de borde */
+    padding: 8px 20px;
+    border-radius: 25px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+  .buttonM:hover{
+    color: rgb(74, 42, 255); /* color de fuente hover */
+  }
+  .buttonM::after{
+    content: "";
+    background: #37f3b4; /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+  .buttonM:hover::after{
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+  

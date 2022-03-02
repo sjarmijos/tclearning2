@@ -1,0 +1,54 @@
+{% extends "inicio.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block equation %}
+<link rel="stylesheet" href="{% static 'mathscribe/jqmath-0.4.3.css' %}">
+<script src="{% static 'mathscribe/jquery-1.4.3.min.js' %}"></script>
+<script src="{% static 'mathscribe/jqmath-etc-0.4.6.min.js' %}" charset="utf-8"></script>
+{% endblock %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/stylecalc.css' %}">{% endblock %}
+{% block title %} Calculadora | Conjuntos {% endblock %}
+
+
+{% block header %}
+<section class="textos-header" style="text-align: right;">
+    <h1>Utiliza todas las herramientas </h1>
+    <h2>Que la tecnología pone a tu disposición</h2>
+</section>
+<div class="ola">
+    <div style="height: 150px; overflow: hidden;">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+            <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #fff;">
+            </path>
+        </svg>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block contenido %}
+
+<h1 style="color: #fff;">Seleccione la operación que desea realizar</h1>
+<div class="container">
+    <a class="buttonV" href="{% url 'calculadora' %}">
+        <span> <img src="{% static 'img/menuunion.png' %}" alt="imagen unión" width="90%"> </span>
+    </a>
+    <a class="buttonV" href="{% url 'calcuinter' %}">
+        <span> <img src="{% static 'img/menuinter.png' %}" alt="imagen intersección" width="90%"> </span>
+    </a>
+</div>
+<br>
+<div class="container">
+    <a class="buttonV" href="{% url 'calcudif' %}">
+        <span> <img src="{% static 'img/menudif.png' %}" alt="imagen intersección" width="90%"> </span>
+    </a>
+    <a class="buttonV" href="{% url 'calcudifsim' %}">
+        <span> <img src="{% static 'img/menudsim.png' %}" alt="imagen intersección" width="90%"> </span>
+    </a>
+</div>
+<br><br>
+{% endblock %}
