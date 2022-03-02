@@ -1,0 +1,394 @@
+/*cambio de color en el desplazamiento del navbar*/
+.gris{
+    background:rgba(0, 0, 0, 0.267);
+  }
+  .top-nav-collapse{
+    background: rgba(8, 121, 129, 0.568) !important;
+  }
+  @media only screen and (max-width: 768px) {
+    .navbar {
+      background-color: #34456a;
+    }
+  }
+  /*fin cambio de color */
+  .buttonM{
+    background: #fff; /* color de fondo */
+    color: black; /* color de fuente */
+    border: 2px solid #37f3b4; /* tamaño y color de borde */
+    padding: 8px 20px;
+    border-radius: 25px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    text-transform: uppercase;
+  }
+  .buttonM:hover{
+    color: rgb(74, 42, 255); /* color de fuente hover */
+  }
+  .buttonM::after{
+    content: "";
+    background: #37f3b4; /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+  .buttonM:hover::after{
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+
+
+
+
+
+/* general */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+img{
+  border-radius: 2%;
+  box-shadow: black;
+}
+
+/* Estilos para elementos del sidebar para la navegación */
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 78px;
+  background: #11101d;
+  padding: 6px 14px;
+  transition: all 0.5s ease;
+}
+.sidebar.active{
+  width: 240px;
+}
+.sidebar .logo_content .logo{
+  color: #fff;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+.sidebar.active .logo_content .logo{
+  pointer-events: none;
+  opacity: 1;
+}
+.logo_content .logo i{
+  font-size: 28px;
+  margin-right: 5px;
+}
+.logo_content .logo .logo_name{
+  font-size: 20px;
+  font-weight: 400;
+  padding-left: 8px;
+}
+.sidebar #btnm {
+  position: absolute;
+  color: #fff;
+  left: 50%;
+  top: 6px;
+  font-size: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  transform: translateX(-50%);
+}
+.sidebar.active #btnm{
+  left: 90%;
+}
+.sidebar ul{
+  margin-top: 20px;
+}
+.sidebar ul li{
+  position: relative;
+  height: 50px;
+  margin: 0 5px 0 -30px;
+  list-style: none;
+  line-height: 50px;
+}
+.sidebar ul li .tooltip{
+  position: absolute;
+  left: 122px;
+  top: 0;
+  transform: translate(-50% , -50%);
+  border-radius: 6px;
+  height: 35px;
+  width: 122px;
+  background: #fff;
+  line-height: 35px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: 0s;
+  opacity: 0;
+  pointer-events: none;
+  display: block;
+}
+.sidebar.active ul li .tooltip{
+  display: none;
+}
+.sidebar ul li:hover .tooltip{
+  transition: all 0.5s ease;
+  opacity: 1;
+  top: 50%;
+}
+.sidebar ul li a{
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.04s ease;  
+  border-radius: 12px;
+  white-space: nowrap;
+}
+.sidebar ul li a:hover{
+  color: #11101d;
+  background: #fff;
+}
+.sidebar ul li i{
+  height: 50px;
+  min-width: 50px;
+  border-radius: 12px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.sidebar .links_name{
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+.sidebar.active .links_name{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sidebar .profile_content{
+  position: absolute;
+  color: #fff;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.sidebar .profile_content .profile{
+  position: relative;
+  padding: 10px 6px;
+  height: 60px;
+  background: none;
+  transition: all 0.5s ease;
+}
+.sidebar.active .profile_content .profile{
+  background: none;
+}
+.profile_content .profile .profile_details{
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.sidebar.active .profile .profile_details{
+  opacity: 1;
+  pointer-events: auto;
+}
+.profile .profile_details img{
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.profile .profile_details .name_job{
+  margin-left: 10px;
+}
+.profile .profile_details .name{
+  font-size: 15px;
+  font-weight: 400;
+}
+.profile .profile_details .job{
+  font-size: 12px;
+}
+.profile #log_out{
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  transform: translateX(-50%);
+  min-width: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.4s ease;
+  background: #1d1b31;
+}
+.sidebar.active .profile #log_out{
+  left: 88%;
+}
+.sidebar.active .profile #log_out{
+  background: none;
+}
+/* fin de los estilos para elementos sidebar de navegación */
+
+
+.contenido{
+  position: absolute;
+  height: 100%;
+  width: calc(100% - 78px);
+  left: 78px;
+  transition: all 0.5s ease;
+}
+.contenido .bnav{
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+.sidebar.active ~ .contenido .bnav{
+  width: 100%;
+}
+.sidebar.active ~ .contenido .bnav .navbar-brand{
+  opacity: 0%;
+}
+
+.contenido .texto{
+  font-size: 25px;
+  font-weight: 400;
+  color: #1d1b31;
+  margin: 80px;
+}
+
+.sidebar.active ~ .contenido{
+  width: calc(100% - 240px);
+  left: 240px;
+}
+
+header{
+  width: 100%;
+  height: 800px;
+  background: #43c6ac96;  
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #aee8ff96, #ffa60069);  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #aee8ff96, #ffa60069), url(../img/ejemplof1.jpg); 
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+.contenido .ola{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+h1{
+  text-align: center;
+}
+body{
+  background: url(../img/cuadricula.jpg); 
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+p{
+  text-align: justify;
+}
+
+.buttonC{
+  color: red;
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  border: 2px solid rgb(0, 225, 255);
+  margin: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 1.5px; 
+  -webkit-box-reflect: below 0.8px linear-gradient(transparent, #0002);
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+.buttonC:hover{
+  transition-delay: 1.5s;
+  color: #000;
+  box-shadow: 0 0 10px rgb(0, 225, 255),
+              0 0 20px rgb(0, 225, 255),
+              0 0 40px rgb(0, 225, 255);
+}
+.buttonC span{
+  position: relative;
+  z-index: 100;
+}
+.buttonC:nth-child(2){
+  filter: hue-rotate(80deg);
+}
+.buttonC::before{
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: rgb(0, 225, 255);
+  box-shadow: 5px -8px 0 rgb(0, 225, 255), 
+              5px 8px 0 rgb(0, 225, 255);
+  transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+  transition-delay: 1s,0.5s,0s,0s;
+}
+.buttonC:hover::before{
+  width: 60%;
+  height: 100%;
+  left: -2px;
+  box-shadow:5px 0px 0 rgb(0, 225, 255), 
+             5px 0px 0 rgb(0, 225, 255);
+  transition-delay: 0s,0.5s,1s,1s;
+}
+.buttonC::after{
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: rgb(0, 225, 255);
+  box-shadow: -5px -8px 0 rgb(0, 225, 255), 
+              -5px 8px 0 rgb(0, 225, 255);
+  transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+  transition-delay: 1s,0.5s,0s,0s;
+}
+.buttonC:hover::after{
+  width: 60%;
+  height: 100%;
+  right: -2px;
+  box-shadow:-5px 0px 0 rgb(0, 225, 255), 
+             -5px 0px 0 rgb(0, 225, 255);
+  transition-delay: 0s,0.5s,1s,1s;
+}
